@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人星露谷博客</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        * {
+          margin: 0px;
+          padding: 0px;
+          list-style: none;
+        }
+   
+        body {
+          background-color: #5c3e33; /* 更改为深棕色 */
+        }
+   
+        #bigbox {
+          width: 1000px;
+          margin: 0 auto;
+        }
+   
+        #banner {
+          width: 1000px;
+          font-size: 0px;
+        }
+   
+        #banner img {
+          width: 1000px;
+          height: 400px;
+        }
+   
+        nav {
+          background-color: #a88f6a; /* 更改为木质色调 */
+          width: 1000px;
+          height: 60px;
+        }
+   
+        nav a {
+          text-decoration: none;
+          line-height: 60px;
+          margin-left: 50px;
+          margin-right: 50px;
+          color: #2b1e11; /* 更改为深棕色文字 */
+          font-weight: bold;
+        }
+   
+        nav a:hover {
+          color: #6eb439; /* 绿色高亮 */
+        }
+   
+        .dangqian {
+          color: #6eb439; /* 绿色当前 */
+        }
+   
+        #main {
+          height: 490px;
+          width: 1000px;
+          margin: 0 auto;
+          background-color: #e0d4b1; /* 浅黄色 */
+        }
+   
+        #main_left {
+          width: 300px;
+          display: inline-block;
+          background-color: #e0d4b1; /* 保持浅黄色 */
+          float: left;
+        }
+   
+        h2 {
+          box-sizing: border-box;
+          padding-left: 10px;
+          font-size: 20px;
+          line-height: 30px;
+          background-color: #46321e; /* 深棕色标题背景 */
+          color: #e0d4b1; /* 浅黄色文字 */
+        }
+   
+        #main_left img {
+          width: 300px;
+        }
+   
+        #main_left p {
+          margin-left: 10px;
+          line-height: 40px;
+        }
+   
+        #main_left span {
+          font-weight: bold;
+        }
+   
+        #main_right {
+          position: relative;
+          width: 680px;
+          margin-left: 20px;
+          display: inline-block;
+          height: 200px;
+        }
+   
+        #main_right img {
+          position: absolute;
+          width: 260px;
+          right: 0px;
+          top: 30px;
+          height: 450px;
+        }
+   
+        #main_right p {
+          width: 400px;
+          display: inline-block;
+          margin-left: 10px;
+          text-indent: 32px;
+          line-height: 30px;
+          margin-top: 10px;
+        }
+   
+        #luxing {
+          background-color: #e0d4b1; /* 保持浅黄色 */
+          width: 1000px;
+        }
+   
+        #luxing div {
+          font-size: 0px;
+        }
+   
+        #picture {
+          font-size: 0px;
+          display: inline-block;
+          margin-left: 25px;
+          margin-right: 25px;
+          margin-top: 25px;
+        }
+   
+        #picture img {
+          width: 200px;
+          height: 200px;
+        }
+   
+        #picture p {
+          font-size: 16px;
+          text-align: center;
+          line-height: 60px;
+          color: #46321e; /* 深棕色文字 */
+        }
+   
+        #main_right ul li {
+          width: 660px;
+          margin-left: 10px;
+          font-size: 12px;
+          margin-top: 10px;
+          border-bottom: 1px dotted #6eb439; /* 绿色虚线 */
+          padding-bottom: 10px;
+        }
+   
+        #main_right ul li span {
+          font-size: 14px;
+          font-weight: bold;
+        }
+   
+        #liuyan {
+          width: 660px;
+          margin-left: 10px;
+          margin: 20px;
+        }
+   
+        #liuyan span {
+          display: inline-block;
+          width: 80px;
+          line-height: 40px;
+        }
+   
+        button {
+          width: 100px;
+          height: 30px;
+          margin-left: 80px;
+          background-color: #6eb439; /* 绿色按钮 */
+          color: white; /* 白色按钮文字 */
+          border: none;
+          cursor: pointer;
+        }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#banner, #main {
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+nav a:hover {
+  color: #6eb439;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+#main_left img, #main_right img {
+  transition: transform 0.5s ease-in-out;
+}
+
+#main_left img:hover, #main_right img:hover {
+  transform: rotate(10deg);
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#luxing #picture {
+  animation: slideIn 1s ease-in-out forwards;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+#luxing #picture:nth-child(1) {
+  animation-delay: 0s;
+}
+#luxing #picture:nth-child(2) {
+  animation-delay: 0.3s;
+}
+#luxing #picture:nth-child(3) {
+  animation-delay: 0.6s;
+}
+#luxing #picture:nth-child(4) {
+  animation-delay: 0.9s;
+}
+      </style>
+  </head>
+
+  <body>
+    <div id="bigbox">
+      <div id="banner">
+        <img src="/博客图片/背景图.png" alt="" />
+      </div>
+      <nav>
+        <a class="dangqian" href="">首页</a>
+        <a href="简介.html">简介</a>
+        <a href="日志.html">日志</a>
+      </nav>
+      <div id="main">
+        <div id="main_left">
+          <h2>关于自己</h2>
+          <img src="/博客图片/头像.jpg">
+          <p>
+            <span>姓名</span>:有亿点喜欢黎<br />
+            <span>性别</span>:女<br />
+            <span>简介</span>:吃够谷子就躺了
+          </p>
+        </div>
+        <div id="main_right">
+          <h2>星露谷小记</h2>
+          <p>
+            一、在每个季节结束之后（每个月的第28天后结束），农作物均会枯萎和死亡，除非该作物的生长季节包含下个季节（因此你需要注意农作物的生长周期）。对土地所使用的肥料也会失去效果，除非被施加在连续多季生长的作物上。
+          </p>
+          <p>
+            二、玩家能够将出售的物品放入出货箱或迷你出货箱进行售卖。每日结算时会转换为金币。
+          </p>
+          <p>
+            三、在求婚之前，玩家与想结婚的对象之间需要有10颗心的好感度，所以在好感度达到8心后，玩家需要先送花束提高好感上限。
+          </p>
+          <p>
+            四、法师塔的门是默认是锁着的。只有在触发过场动画后进入社区中心并阅读工艺室的金卷轴，收到法师邮件邀请之后，法师塔才会向玩家开放。
+          </p>
+          <img src="/博客图片/边栏.jpg" alt="" />
+          <br>
+        </div>
+      </div>
+      <div id="luxing">
+        <h2>截图收藏</h2>
+        <div>
+          <div id="picture">
+            <img src="/博客图片/水母节.jpg" alt="" />
+            <p>庆祝水母节
+            </p>
+          </div>
+          <div id="picture">
+            <img src="/博客图片/384摩托.jpg"alt="" />
+            <p>384夜骑</p>
+          </div>
+          <div id="picture">
+            <img src="/博客图片/酿酒.jpg" alt="" />
+            <p>采石场酿酒</p>
+          </div>
+          <div id="picture">
+            <img src="/博客图片/花舞节.jpg" alt="" />
+            <p>花舞节</p>
+          </div>
+        </div>
+  </body>
+</html>
